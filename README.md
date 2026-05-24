@@ -69,7 +69,7 @@ PACE-PDR 系统围绕以下六个核心能力构建：
 ## 应用界面展示
 
 <p align="center">
-  <img src="app-demo.png" alt="PACE-PDR 应用界面展示" width="360">
+  <img src="app_demo.png" alt="PACE-PDR 应用界面展示" width="360">
 </p>
 
 界面可展示以下关键信息：
