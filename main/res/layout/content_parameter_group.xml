@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvGroupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#x53C2;&#x6570;&#x7EC4;"
+        android:textColor="#102A43"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="&#x5EFA;&#x8BAE;&#x4E00;&#x6B21;&#x53EA;&#x5FAE;&#x8C03;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6BCF;&#x6B21;&#x6539;&#x52A8;&#x540E;&#x91CD;&#x65B0;&#x91C7;&#x96C6;&#x6216;&#x91CD;&#x65B0;&#x505A;&#x4E00;&#x6B21;&#x4E8B;&#x540E;&#x5904;&#x7406;&#x3002;"
+        android:textColor="#7B8794"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="&#x57FA;&#x7840;&#x6B65;&#x957F;&#x7CFB;&#x6570;"
+        android:textColor="#334E68"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etBaseLengthFactor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical"
+        android:hint="&#x63A7;&#x5236;&#x57FA;&#x7840;&#x6B65;&#x957F;"
+        android:inputType="numberDecimal|numberSigned"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="#102A43"
+        android:textColorHint="#9FB3C8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="&#x6B65;&#x9891;&#x7CFB;&#x6570;"
+        android:textColor="#334E68"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etCadenceFactor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical"
+        android:hint="&#x6B65;&#x9891;&#x8D8A;&#x5FEB;&#xFF0C;&#x6B65;&#x957F;&#x589E;&#x76CA;&#x8D8A;&#x5927;"
+        android:inputType="numberDecimal|numberSigned"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="#102A43"
+        android:textColorHint="#9FB3C8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="&#x5E45;&#x503C;&#x7CFB;&#x6570;"
+        android:textColor="#334E68"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etAmplitudeFactor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical"
+        android:hint="&#x63A7;&#x5236;&#x6446;&#x52A8;&#x5E45;&#x503C;&#x5BF9;&#x6B65;&#x957F;&#x7684;&#x5F71;&#x54CD;"
+        android:inputType="numberDecimal|numberSigned"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="#102A43"
+        android:textColorHint="#9FB3C8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="&#x6B65;&#x957F;&#x7F29;&#x653E;&#x7CFB;&#x6570;"
+        android:textColor="#334E68"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etScaleFactor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical"
+        android:hint="&#x6574;&#x4F53;&#x653E;&#x5927;&#x6216;&#x7F29;&#x5C0F;&#x6700;&#x7EC8;&#x6B65;&#x957F;"
+        android:inputType="numberDecimal|numberSigned"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="#102A43"
+        android:textColorHint="#9FB3C8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="&#x6700;&#x5C0F;&#x6B65;&#x95F4;&#x9694;&#xFF08;&#x79D2;&#xFF09;"
+        android:textColor="#334E68"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etMinStepIntervalSec"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical"
+        android:hint="&#x6570;&#x503C;&#x8D8A;&#x5927;&#x8D8A;&#x4E0D;&#x5BB9;&#x6613;&#x4E00;&#x6B65;&#x591A;&#x68C0;"
+        android:inputType="numberDecimal|numberSigned"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="#102A43"
+        android:textColorHint="#9FB3C8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="&#x6B65;&#x6570;&#x68C0;&#x6D4B;&#x9608;&#x503C;&#x7CFB;&#x6570;"
+        android:textColor="#334E68"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etDetectionThresholdScale"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical"
+        android:hint="&#x9ED8;&#x8BA4; 1.0&#xFF0C;&#x8D8A;&#x5927;&#x8D8A;&#x4E0D;&#x654F;&#x611F;"
+        android:inputType="numberDecimal|numberSigned"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="#102A43"
+        android:textColorHint="#9FB3C8" />
+</LinearLayout>

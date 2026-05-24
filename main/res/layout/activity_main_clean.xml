@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FAFD">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PDR 系统"
+                    android:textColor="#102A43"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="支持实时采集、事后处理、GPS 对比和参数调节。"
+                    android:textColor="#486581"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/etSessionName"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center_vertical"
+                    android:hint="会话名称（可选）"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="#102A43"
+                    android:textColorHint="#9FB3C8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="AHRS 模式"
+                    android:textColor="#334E68"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgAhrsMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb6Axis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6 轴" />
+
+                    <RadioButton
+                        android:id="@+id/rb9Axis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="9 轴" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="携带模式"
+                    android:textColor="#334E68"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgCarryMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbHandheld"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="手持" />
+
+                    <RadioButton
+                        android:id="@+id/rbPocket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="口袋" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnRealtime"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_primary"
+                        android:gravity="center"
+                        android:text="开始采集"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="12dp"
+                        android:layout_height="1dp" />
+
+                    <TextView
+                        android:id="@+id/btnOffline"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_secondary"
+                        android:gravity="center"
+                        android:text="事后处理"
+                        android:textColor="#486581"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_btn_secondary"
+                    android:gravity="center"
+                    android:text="参数设置"
+                    android:textColor="#486581"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/offlinePanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="事后处理文件选择"
+                    android:textColor="#102A43"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOfflineHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="请先选择传感器文件，GPS 真值文件可选。两个文件都选好时会同时显示两条轨迹；只选传感器文件时只显示 PDR。"
+                    android:textColor="#486581"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/btnSelectOfflineSensor"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_btn_secondary"
+                    android:gravity="center"
+                    android:text="选择传感器文件"
+                    android:textColor="#486581"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOfflineSensorPath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="传感器文件：未选择"
+                    android:textColor="#334E68"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/btnSelectOfflineGps"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_btn_secondary"
+                    android:gravity="center"
+                    android:text="选择 GPS 真值文件"
+                    android:textColor="#486581"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOfflineGpsPath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="GPS 文件：未选择（可选）"
+                    android:textColor="#334E68"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/btnStartOfflineProcess"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_btn_primary"
+                    android:gravity="center"
+                    android:text="开始事后处理"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前模式：实时 PDR"
+                    android:textColor="#102A43"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvInitState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="初始化：等待开始"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvAhrs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="AHRS：9 轴｜携带：手持"
+                    android:textColor="#334E68" />
+
+                <com.example.pdr_zjj.UI.TrackView
+                    android:id="@+id/trackView"
+                    android:layout_width="match_parent"
+                    android:layout_height="420dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#FFFFFF" />
+
+                <CheckBox
+                    android:id="@+id/cbShowGpsTrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:text="显示 GPS 轨迹"
+                    android:textColor="#334E68"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvStepCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="步数：0"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvPdrDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="PDR 行进距离：0.00 m"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvClosureError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="闭合差：0.00 m"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="航向：0.0°"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvStepLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="步长：0.00 m"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="位置：E=0.00 m, N=0.00 m"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="时间：0.000 s"
+                    android:textColor="#334E68" />
+
+                <TextView
+                    android:id="@+id/tvInterrupt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="中断状态：否"
+                    android:textColor="#334E68" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/coverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_cover_screen"
+        android:paddingStart="24dp"
+        android:paddingTop="52dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="26dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PDR 智能定位系统"
+                android:textColor="#16293D"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pedestrian Dead Reckoning"
+                android:textColor="#3C5874"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="实时定位与轨迹解算"
+                android:textColor="#6A86A2"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="294dp"
+                android:layout_height="294dp"
+                android:layout_marginTop="32dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="PDR 封面"
+                android:scaleType="fitCenter"
+                android:src="@drawable/picture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="系统启动中..."
+                android:textColor="#5E7A97"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="欢迎进入室内行人航位推算平台"
+                android:textColor="#83A0B9"
+                android:textSize="12sp" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="开发者：武汉大学 张嘉晋"
+                android:textColor="#62809D"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

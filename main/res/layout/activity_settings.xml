@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FAFD"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#x53C2;&#x6570;&#x8BBE;&#x7F6E;"
+                android:textColor="#102A43"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="2dp"
+                android:text="&#x4FDD;&#x5B58;&#x540E;&#xFF0C;&#x65B0;&#x53C2;&#x6570;&#x4F1A;&#x7528;&#x4E8E;&#x4E0B;&#x4E00;&#x6B21;&#x5B9E;&#x65F6;&#x91C7;&#x96C6;&#x548C;&#x4E8B;&#x540E;&#x5904;&#x7406;&#x3002;&#x5EFA;&#x8BAE;&#x5148;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x518D;&#x6839;&#x636E;&#x8F68;&#x8FF9;&#x957F;&#x5EA6;&#x548C;&#x6B65;&#x6570;&#x6548;&#x679C;&#x5FAE;&#x8C03;&#x3002;"
+                android:textColor="#486581"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#x5168;&#x5C40;&#x53C2;&#x6570;"
+                android:textColor="#102A43"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="&#x8FD9;&#x90E8;&#x5206;&#x4F1A;&#x540C;&#x65F6;&#x5F71;&#x54CD;&#x5B9E;&#x65F6;&#x6A21;&#x5F0F;&#x548C;&#x4E8B;&#x540E;&#x6A21;&#x5F0F;&#x3002;"
+                android:textColor="#7B8794"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="&#x8EAB;&#x9AD8;&#xFF08;&#x7C73;&#xFF09;"
+                android:textColor="#334E68"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etHeightMeter"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:gravity="center_vertical"
+                android:hint="&#x4F8B;&#x5982; 1.72"
+                android:inputType="numberDecimal"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#102A43"
+                android:textColorHint="#9FB3C8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="&#x78C1;&#x504F;&#x89D2;&#xFF08;&#x5EA6;&#xFF09;"
+                android:textColor="#334E68"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDeclinationDeg"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:gravity="center_vertical"
+                android:hint="&#x9ED8;&#x8BA4; 0&#xFF0C;&#x53EF;&#x6309;&#x5730;&#x533A;&#x4FEE;&#x6B63;"
+                android:inputType="numberDecimal|numberSigned"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#102A43"
+                android:textColorHint="#9FB3C8" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="&#x6B65;&#x957F;&#x6A21;&#x578B;&#x53C2;&#x6570;"
+            android:textColor="#102A43"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="&#x5DF2;&#x6309;&#x5B9E;&#x65F6;/&#x4E8B;&#x540E;&#x3001;6&#x8F74;/9&#x8F74;&#x62C6;&#x5F00;&#xFF0C;&#x65B9;&#x4FBF;&#x4F60;&#x5206;&#x522B;&#x8C03;&#x53C2;&#x3002;&#x5F53;&#x524D;&#x9ED8;&#x8BA4;&#x503C;&#x4F18;&#x5148;&#x9488;&#x5BF9; 9 &#x8F74;&#x6548;&#x679C;&#x505A;&#x4E86;&#x6536;&#x655B;&#x3002;"
+            android:textColor="#486581"
+            android:textSize="13sp" />
+
+        <include
+            android:id="@+id/panelRealtime6"
+            layout="@layout/content_parameter_group" />
+
+        <include
+            android:id="@+id/panelRealtime9"
+            layout="@layout/content_parameter_group" />
+
+        <include
+            android:id="@+id/panelOffline6"
+            layout="@layout/content_parameter_group" />
+
+        <include
+            android:id="@+id/panelOffline9"
+            layout="@layout/content_parameter_group" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnResetDefaults"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_secondary"
+                android:gravity="center"
+                android:text="&#x6062;&#x590D;&#x9ED8;&#x8BA4;"
+                android:textColor="#486581"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/btnSaveSettings"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_primary"
+                android:gravity="center"
+                android:text="&#x4FDD;&#x5B58;&#x53C2;&#x6570;"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
